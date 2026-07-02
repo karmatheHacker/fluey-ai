@@ -1,0 +1,79 @@
+{
+  "expo": {
+    "name": "Fluey AI",
+    "slug": "fluey-ai",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/images/fluey-logo.png",
+    "scheme": "myapp",
+    "userInterfaceStyle": "automatic",
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.flueyai.app",
+      "icon": "./assets/images/fluey-logo.png",
+      "backgroundColor": "#18181b",
+      "infoPlist": {
+        "ITSAppUsesNonExemptEncryption": false
+      }
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/images/fluey-logo.png",
+        "backgroundColor": "#18181b"
+      },
+      "permissions": [
+        "android.permission.CAMERA",
+        "android.permission.RECORD_AUDIO"
+      ],
+      "package": "com.flueyai.app"
+    },
+    "web": {
+      "bundler": "metro",
+      "output": "static",
+      "favicon": "./assets/images/favicon.png"
+    },
+    "plugins": [
+      "expo-router",
+      [
+        "expo-splash-screen",
+        {
+          "image": "./assets/images/fluey-logo.png",
+          "imageWidth": 250,
+          "resizeMode": "contain",
+          "backgroundColor": "#18181b"
+        }
+      ],
+      [
+        "expo-camera",
+        {
+          "cameraPermission": "Allow Fluey AI to access your camera",
+          "microphonePermission": "Allow Fluey AI to access your microphone",
+          "recordAudioAndroid": true
+        }
+      ],
+      [
+        "expo-image-picker",
+        {
+          "photosPermission": "The app needs access to your photos to set your profile picture."
+        }
+      ],
+      [
+        "react-native-edge-to-edge",
+        {
+          "android": {
+            "parentTheme": "System",
+            "enforceNavigationBarContrast": false
+          }
+        }
+      ]
+    ],
+    "experiments": {
+      "typedRoutes": true
+    },
+    "extra": {
+      "router": {
+        "origin": false
+      }
+    }
+  }
+}
